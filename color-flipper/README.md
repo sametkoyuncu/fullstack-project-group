@@ -1,6 +1,6 @@
 # Color Flipper
 
-You can change background color ramdomly with use 'change' button and if you want copy the hex code of current color use 'copy' button.
+You can change background color randomly using the 'change' button and if you want to copy the hex code of the current color, use the 'copy' button.
 
 ## Screenshot
 
