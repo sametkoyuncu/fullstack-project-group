@@ -4,4 +4,4 @@ You can change background color ramdomly with use 'change' button and if you wan
 
 ## Screenshot
 
-![color-flipper-screentshot]()
+![color-flipper-screentshot](https://github.com/sametkoyuncu/fullstack-project-group/blob/master/color-flipper/screenshot.png?raw=true)
