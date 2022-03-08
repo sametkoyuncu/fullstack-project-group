@@ -20,7 +20,7 @@
 <body class="bodyColor">
     <div class="container p-5">
         <div class="row mt-5 pt-5">
-            <div class="col-6 mx-auto">
+            <div class="col-md-6 col-sm-10 mx-auto">
                 <div class="card text-center shadow rounded">
                     <div class="card-header fw-bolder">
                         Color Filipper
@@ -36,18 +36,40 @@
 
                         <a href="#" onClick="changeColor()"
                             class="btn btn-primary shadow rounded-pill px-4 mb-3">Change</a>
-                        <a href="#" onClick="copyColor()"
-                            class="btn btn-outline-primary shadow rounded-pill px-4 mb-3">Copy</a>
+                        <a href="#" onClick="copyColor()" class="btn btn-outline-primary shadow rounded-pill px-4 mb-3"
+                            id="liveToastBtn">Copy</a>
+                        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                            <div id="liveToast" class="toast  text-white bg-primary border-0" role="alert"
+                                aria-live="assertive" aria-atomic="true">
+                                <div class="d-flex">
+                                    <div class="toast-body" id="toastText">
+
+                                    </div>
+                                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                        data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+
+
+
     <script>
         let bodyColor = document.querySelector('.bodyColor');
         let myInput = document.querySelector('#myInput');
-        let randomColor
+        let randomColor = "ffffff"
+
+        let toastText = document.querySelector('#toastText');
+        var toastTrigger = document.getElementById('liveToastBtn')
+        var toastLiveExample = document.getElementById('liveToast')
+
         const changeColor = () => {
             randomColor = Math.floor(Math.random() * 16777215).toString(16);
             bodyColor.style.backgroundColor = "#" + randomColor
@@ -64,9 +86,16 @@
 
             /* Copy the text inside the text field */
             navigator.clipboard.writeText(copyText.value);
+        }
 
-            /* Alert the copied text */
-            alert("Copied the text: " + copyText.value);
+
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', function () {
+                toastText.innerHTML =
+                    `The Color HEX Code <strong>#${randomColor}</strong> Copied to Clipboard 👍`
+                var toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+            })
         }
     </script>
 
