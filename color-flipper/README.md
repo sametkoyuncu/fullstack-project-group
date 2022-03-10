@@ -5,4 +5,4 @@ You can change background color randomly using the 'change' button and if you wa
 
 ## Screenshot
 
-![color-flipper-screentshot](https://github.com/sametkoyuncu/fullstack-project-group/blob/master/color-flipper/newScreenshot.png?raw=true)
+![color-flipper-screentshot](https://github.com/sametkoyuncu/fullstack-project-group/blob/master/color-flipper/paletteScreenshot.png?raw=true)
