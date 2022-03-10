@@ -12,6 +12,7 @@ var toastLiveExample2 = document.getElementById('liveToast2')
 const changeGradient = () => {
   randomColor1 = Math.floor(Math.random() * 16777215).toString(16)
   randomColor2 = Math.floor(Math.random() * 16777215).toString(16)
+
   bodyColor2.style.backgroundImage = `linear-gradient(to right, #${randomColor1} ,  #${randomColor2})`
   myInput1.value = randomColor1
   myInput2.value = randomColor2

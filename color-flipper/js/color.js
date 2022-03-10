@@ -9,6 +9,7 @@ var toastLiveExample = document.getElementById('liveToast')
 const changeColor = () => {
   randomColor = Math.floor(Math.random() * 16777215).toString(16)
   bodyColor.style.backgroundImage = null
+
   bodyColor.style.backgroundColor = '#' + randomColor
   myInput.value = randomColor
 }
